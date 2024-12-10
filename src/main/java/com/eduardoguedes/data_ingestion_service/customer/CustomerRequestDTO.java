@@ -12,9 +12,6 @@ public record CustomerRequestDTO(
         @NotNull(message = "Registration date is required")
         java.time.LocalDate registrationDate,
 
-        @NotNull(message = "Date of birth is required")
-        java.time.LocalDate dateOfBirth,
-
         @NotBlank(message = "Gender is required")
         String gender,
 
@@ -31,6 +28,8 @@ public record CustomerRequestDTO(
         String country,
 
         String nickname,
+
+        java.time.LocalDate dateOfBirth,
 
         @Email(message = "Invalid email format")
         String email,

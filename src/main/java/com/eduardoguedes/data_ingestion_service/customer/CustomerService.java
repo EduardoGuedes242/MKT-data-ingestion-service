@@ -15,6 +15,8 @@ public class CustomerService {
         return  customerRepository.findAll();
     }
 
-
+    public void createCustomer(CustomerEntity customerEntity) {
+        customerRepository.save(customerEntity);
+    }
 
 }
