@@ -36,6 +36,8 @@ public record CustomerRequestDTO(
 
         String phone,
 
-        String observation
+        String observation,
+
+        Integer extraCode
 ) {
 }
