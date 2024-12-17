@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CustomerService {
@@ -15,7 +16,16 @@ public class CustomerService {
         return  customerRepository.findAll();
     }
 
-    public void createCustomer(CustomerEntity customerEntity) {
+    public CustomerResponseIdDTO createCustomer(CustomerEntity customerEntity) {
+        customerRepository.save(customerEntity);
+        return new CustomerResponseIdDTO(customerEntity);
+    }
+
+    public Optional<CustomerEntity> getOnlyCustomerById(Long id) {
+        return customerRepository.findById(id);
+    }
+
+    public void editCustomer(CustomerEntity customerEntity) {
         customerRepository.save(customerEntity);
     }
 

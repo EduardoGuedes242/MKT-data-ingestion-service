@@ -59,20 +59,4 @@ public class CustomerEntity {
     @Column(name = "ctm_extra_code")
     private Integer extraCode;
 
-    public CustomerEntity(CustomerRequestDTO customerRequestDTO) {
-        this.name = customerRequestDTO.name();
-        this.registrationDate = customerRequestDTO.registrationDate();
-        this.dateOfBirth = customerRequestDTO.dateOfBirth();
-        this.gender = customerRequestDTO.gender();
-        this.neighborhood = customerRequestDTO.neighborhood();
-        this.city = customerRequestDTO.city();
-        this.state = customerRequestDTO.state();
-        this.country = customerRequestDTO.country();
-        this.nickname = customerRequestDTO.nickname();
-        this.email = customerRequestDTO.email();
-        this.phone = customerRequestDTO.phone();
-        this.observation = customerRequestDTO.observation();
-        this.extraCode = customerRequestDTO.extraCode();
-    }
-
 }
