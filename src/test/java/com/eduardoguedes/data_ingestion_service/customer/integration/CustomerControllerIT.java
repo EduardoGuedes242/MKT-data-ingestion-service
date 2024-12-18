@@ -47,7 +47,7 @@ public class CustomerControllerIT {
     @Test
     @DisplayName("Should create new Customer")
     void shouldCreateNewCustomer() throws Exception {
-        String novoClienteJson = """
+        String newCustomerJson = """
                 {
                   "name": "Edu dudu"
                 }
@@ -56,7 +56,7 @@ public class CustomerControllerIT {
 
         mockMvc.perform(post("/customer")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(novoClienteJson))
+                        .content(newCustomerJson))
                 .andExpect(status().isOk());
 
     }
