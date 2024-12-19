@@ -16,7 +16,6 @@ import java.time.LocalDate;
 @Table(name = "customer")
 public class CustomerEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ctm_id")
     private Long id;
 

@@ -25,12 +25,6 @@ public class CustomerController {
        return customerService.createCustomer(customerEntity);
     }
 
-    @PutMapping("/edit")
-    public String patchCustomer(@Validated @RequestBody CustomerEntity customerEntity) {
-        customerService.editCustomer(customerEntity);
-        return "Customer alter with Success";
-    }
-
     @GetMapping("/{id}")
     public Optional<CustomerEntity> getOnlyCustomer(@Valid @PathVariable Long id) {
         return customerService.getOnlyCustomerById(id);

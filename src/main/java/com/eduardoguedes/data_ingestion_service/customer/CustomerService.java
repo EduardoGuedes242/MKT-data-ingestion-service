@@ -25,8 +25,4 @@ public class CustomerService {
         return customerRepository.findById(id);
     }
 
-    public void editCustomer(CustomerEntity customerEntity) {
-        customerRepository.save(customerEntity);
-    }
-
 }
